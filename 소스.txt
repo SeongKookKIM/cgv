@@ -1,0 +1,154 @@
+바탕화면은 어두운 계열
+배경화면 마우스 따라다니는 그라데이션(일정부분 스크롤마다 색상이 바뀌게)
+글에 호버시 보더바텀 라인으로 색상이 쭈욱 나오게
+메인화면 동영상 마우스 방향에 따라 기울기(소스 찾아봐야함)
+스크롤시 사진 옆으로 지나가게
+마우스 호버시 자석처럼 끌려오게
+(버튼) 갖다대는 방향으로 색상 들어오게
+
+
+
+마우스 오버시 버튼
+div id='wrap'
+<a class="btn-6" href="#">Position Aware<span></span></a>
+@@@@@@@@@@@@@@@@@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+
+$btn-width: 250px !default;
+$btn-height: 80px !default;
+$btn-full: $btn-height+$btn-width !default;
+$btn-half: $btn-full/2 !default;
+$bg-color: #eeeeee !default;
+
+html {
+  padding-top: 50px;
+  font-family: 'Open Sans', Helvetica, arial, sans-serif;
+  text-align: center;
+  background-color: $bg-color;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+  }
+
+  i,em,
+  b,strong,
+  span {
+    transition: none;
+  }
+}
+
+*:before,
+*:after {
+  z-index: -1;
+}
+
+h1,
+h4 {
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  line-height: $btn-height;
+  color: black;
+}
+
+.centerer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    width: 50%;
+    float: left;
+  }
+}
+
+[class^="btn-"] {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  @include size(100%, $btn-height);
+  max-width: $btn-width;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+.btn-6 {
+  $btn-color: random-color($max:200);
+  $btn-color-dark: shade($btn-color, 40%);
+  color: tint($btn-color);
+  
+  span {
+    @include absolute();
+    display: block;
+    @include size(0);
+    border-radius: 50%;
+    background-color: $btn-color-dark;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  &:hover {
+    color: tint($btn-color, 75%);
+    
+    span {
+      @include size(225%, $btn-width*2.25);
+    }
+  }
+  
+  &:active {
+    background-color: $btn-color;
+  }
+}
+@@@@@@@@@@@@@@@@@
+
+$(function() {  
+  $('.btn-6')
+    .on('mouseenter', function(e) {
+      var parentOffset = $(this).offset(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top:relY, left:relX})
+    })
+    .on('mouseout', function(e) {
+      var parentOffset = $(this).offset(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+      $(this).find('span').css({top:relY, left:relX})
+    });
+});
+
+
+
+<img src="img/img4.jpg" alt="" />
+<img src="img/img5.jpg" alt="" />
+<img src="img/img6.jpg" alt="" />
+<img src="img/img7.jpg" alt="" />
+<img src="img/img8.jpg" alt="" />
+<img src="img/img9.jpg" alt="" />
+<img src="img/img10.jpg" alt="" />
+<img src="img/img11.jpg" alt="" />
+<img src="img/img12.jpg" alt="" />
+<img src="img/img13.jpg" alt="" />
+
+.set(".img", {
+    // apply transform rotations to each image
+    rotateY: (i) => i * -36,
+    transformOrigin: "50% 50% 500px",
+    z: -500,
+    backgroundImage: (i) =>
+      "url(https://picsum.photos/id/" + (i + 32) + "/600/400/)",
+    backgroundPosition: (i) => getBgPos(i),
+    backfaceVisibility: "hidden",
+  })

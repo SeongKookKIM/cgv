@@ -397,6 +397,7 @@ header .top_header .toggle .stick {
   margin-top: 20px;
   margin-bottom: 30px;
   background-color: #d8d8d8;
+  font-family: "MICEGothic Bold";
 }
 .video_txt .buy {
   width: 150px;
@@ -409,6 +410,7 @@ header .top_header .toggle .stick {
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 30px;
+  font-family: "MICEGothic Bold";
 }
 
 /* section@@@@@@차트부분 */
@@ -520,6 +522,7 @@ header .top_header .toggle .stick {
   border-radius: 5px;
   margin-right: 5px;
   background-color: #d8d8d8;
+  font-family: "MICEGothic Bold";
 }
 .c-exp-gallery-slide__img .chart_txt .chart_buy {
   width: 150px;
@@ -530,6 +533,7 @@ header .top_header .toggle .stick {
   background-color: rgb(252, 14, 85);
   border-radius: 5px;
   color: #fff;
+  font-family: "MICEGothic Bold";
 }
 .c-exp-gallery-slide__img
   .chart_txt
