@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cgv</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" href="css/cgv.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+        height: 100%;
+      }
+      /* @@@@@@@@@bg */
+      body {
+        transition: all 2s ease-out;
+        background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 100%);
+      }
+      @font-face {
+        font-family: "MICEGothic Bold";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
+          format("woff2");
+        font-weight: 700;
+        font-style: normal;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      span {
+        font-family: "MICEGothic Bold" !important;
+      }
+    </style>
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/jquery.easing.1.3.js"></script>
+    <script src="lib/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(function () {
+        var slider = $(".bxslider").bxSlider({
+          auto: true,
+          controls: false,
+          pagerCustom: "#bx-pager",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header id="bg">
+      <!-- 탑헤더부분 -->
+      <div class="top_header">
+        <div class="img"><img src="img/logoRed.png" alt="logo" /></div>
+        <!-- 햄버거메뉴 -->
+        <div id="page">
+          <div id="toggle">
+            <div class="bar"></div>
+          </div>
+          <section id="overlay">
+            <div class="toggle_img">
+              <img src="img/logoRed.png" alt="logo" />
+            </div>
+            <div class="ac">
+              <div class="ac_box">
+               <a href="#">
+                <img src="img/loginPassword.png" alt="로그인" />
+                <p>로그인</p>
+               </a>
+               <a href="#">
+                <img src="img/loginJoin.png" alt="회원가입" />
+                <p>회원가입</p>
+               </a>
+               <a href="#">
+                <img src="img/loginMember.png" alt="MY CGV" />
+                <p>MY CGV</p>
+               </a>
+               <a href="#">
+                <img src="img/loginCustomer.png" alt="고객센터" />
+                <p>고객센터</p>
+               </a>
+              </div>
+              </nav>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="#">영화</a></li>
+                <li><a href="#">극장</a></li>
+                <li><a href="#">예매</a></li>
+                <li><a href="#">스토어</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">혜택</a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+        <script>
+          $(function () {
+            $("#toggle").click(function () {
+              $("#toggle .bar").toggleClass("animate");
+              $("#page").toggleClass("overlay");
+            });
+          });
+        </script>
+      </div>
+      <!-- 비디오 -->
+      <div class="wrap_video">
+        <div class="main_video">
+          <div id="video">
+            <video
+              src="img/1017_Confession_PC_1080_608.mp4"
+              width="100%"
+              height="100%"
+              muted
+              loop
+              autoplay
+            ></video>
+          </div>
+        </div>
+      </div>
+      <script src="js/video.js"></script>
+
+      <!-- 비디오텍스트 -->
+      <div class="video_txt">
+        <h2>자백</h2>
+        <p>
+          불륜 사실을 폭로하겠다는 협박을 받고 향한 호텔에서 의문의 습격을 당한
+          유민호(소지섭). 정신을 차려보니 함께 있던 김세희(나나)는 죽어있고,
+          범인은 흔적도 없이 사라졌다. 하루아침에 성공한 사업가에서 밀실 살인
+          사건의 유일한 용의자로 누명을 쓴 유민호는
+        </p>
+        <button class="view">상세보기</button>
+        <button class="buy">예매하기</button>
+      </div>
+    </header>
+    <!-- 무비차트 -->
+    <section id="chart">
+      <h3>무비차트</h3>
+      <h4>상영예정작</h4>
+      <!-- 슬라이더 -->
+      <div class="c-exp-gallery__slider js-experience-slider">
+        <div class="c-exp-gallery__inner js-experience-slider__inner">
+          <div class="c-exp-gallery__content js-experience-slider__content">
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/83821_320.jpg" alt="인생은아름다워" />
+                <div class="chart_txt">
+                  <h3>인생은아름다워</h3>
+                  <span>별점 : 97%</span>
+                  <span>예매율 : 2.5%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/86155_320.jpg" alt="공조2" />
+                <div class="chart_txt">
+                  <h3>공조2-인터내셔날</h3>
+                  <span>별점 : 97%</span>
+                  <span>예매율 : 2.5%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/86191_320.jpg" alt="정직한후보" />
+                <div class="chart_txt">
+                  <h3>정직한후보</h3>
+                  <span>별점 : 95%</span>
+                  <span>예매율 : 1.7%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/86194_320.jpg" alt="짱구는못말려" />
+                <div class="chart_txt">
+                  <h3>
+                    극장판 짱구는 못말려-수수께끼! <br />꽃피는 천하떡잎학교
+                  </h3>
+                  <span>별점 : 97%</span>
+                  <span>예매율 : 1.0%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/86201_320.jpg" alt="5등분의신부" />
+                <div class="chart_txt">
+                  <h3>극장판 5등분의 신부</h3>
+                  <span>별점 : 95%</span>
+                  <span>예매율 : 2.4%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/86205_320.jpg" alt="올앳원스" />
+                <div class="chart_txt">
+                  <h3>올 앳 원스</h3>
+                  <span>별점 : 89%</span>
+                  <span>예매율 : 7.8%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="c-exp-gallery-slide js-experience-slide">
+              <div class="c-exp-gallery-slide__proxy"></div>
+              <figure class="c-exp-gallery-slide__img">
+                <img src="img/86216_320.jpg" alt="자백" />
+                <div class="chart_txt">
+                  <h3>자백</h3>
+                  <span>별점 : 94%</span>
+                  <span>예매율 : 15.8%</span>
+                  <button class="chart_view">상세보기</button>
+                  <button class="chart_buy">예매하기</button>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="proxy"></div>
+      </div>
+      <!-- 차트partial -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/utils/Draggable.min.js"></script>
+      <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/ThrowPropsPlugin.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ModifiersPlugin.min.js"></script>
+      <script src="js/chart.js"></script>
+      <!-- 예매하기버튼 -->
+      <div id="container">
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">전체보기</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 영화,기프트,팝콘,슬라이더 부분 -->
+    <section id="middle">
+      <!-- 원형 -->
+      <div class="circle_menu">
+        <svg
+          class="svg-mask"
+          width="1200px"
+          height="600px"
+          viewBox="0 0 1200 600"
+        >
+          <defs>
+            <clipPath id="quarterMask">
+              <path
+                d="M299.001,26.649L0,325.65c330.267,330.268,865.736,330.268,1196.004,0L897.003,26.649
+            C731.868,191.784,464.136,191.784,299.001,26.649z"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <div class="header"></div>
+        <div class="content">
+          <ul class="featured-slider" id="wheel">
+            <li class="active">
+              <div class="image">
+                <div class="details">
+                  <h1 class="title">영화관람권</h1>
+                  <hr class="small" />
+                  <h6 class="roles">영화, 모두에게 즐거운 경험</h6>
+                  <a href="#" class="button">더보기</a>
+                </div>
+                <img src="img/boucher.jpg" alt="영화관람권" />
+              </div>
+            </li>
+            <li>
+              <div class="image">
+                <div class="details">
+                  <h1 class="title">Gift Card</h1>
+                  <hr class="small" />
+                  <h6 class="roles">센스있는 선물의 정석</h6>
+                  <a href="#" class="button">더보기</a>
+                </div>
+                <img src="img/giftcard.jpg" alt="기프트카드" />
+              </div>
+            </li>
+            <li>
+              <div class="image">
+                <div class="details">
+                  <h1 class="title">콤보</h1>
+                  <hr class="small" />
+                  <h6 class="roles">
+                    맛있으면 0칼로리, 아는 맛이 제일 맛있어요
+                  </h6>
+                  <a href="#" class="button">더보기</a>
+                </div>
+                <img src="img/combo.jpg" alt="콤보" />
+              </div>
+            </li>
+            <li>
+              <div class="image">
+                <div class="details">
+                  <h1 class="title">상품권소개</h1>
+                  <hr class="small" />
+                  <h6 class="roles">마음을 담아 선물하세요.</h6>
+                  <a href="#" class="button">더보기</a>
+                </div>
+                <img src="img/present.jpg" alt="상품권" />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <nav>
+          <a class="prev">Prev</a>
+          <a class="next">Next</a>
+        </nav>
+        <div
+          id="pentitle"
+          style="display: none"
+          data-title="29/52 - Circular Slider"
+        ></div>
+      </div>
+      <script src="js/circle.js"></script>
+    </section>
+
+    <!-- 특별관 (parallax) -->
+    <section id="section_special">
+      <h3>특별관</h3>
+      <!-- 슬라이드 -->
+      <div id="main_vis">
+        <ul class="bxslider">
+          <li><img src="img/300x500.jpg" alt="광고" /></li>
+          <li></li>
+        </ul>
+        <div id="bx-pager">
+          <a href="#" data-slide-index="0" class="active">0</a>
+          <a href="#" data-slide-index="1">1</a>
+        </div>
+      </div>
+      <!-- 슬라이드 -->
+      <div id="slider_body">
+        <iframe
+          src="special.html"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- event -->
+    <section id="event">
+      <h3>EVENT</h3>
+      <article>
+        <div class="article_img">
+          <img src="img/16649460074130.jpg" alt="tvung" />
+        </div>
+        <div class="event_txtbox">
+          <p>CGV x TVING 월 정기 혜택 [CGV PLUS] 2022.10.06 ~ 2032.10.06</p>
+        </div>
+      </article>
+      <article>
+        <div class="article_img">
+          <img src="img/16651313310660.png" alt="문유" />
+        </div>
+        <div class="event_txtbox">
+          <p>[4DX 문유] 관람 리뷰 이벤트 2022.10.07 ~ 2022.10.28</p>
+        </div>
+      </article>
+      <article>
+        <div class="article_img">
+          <img src="img/16655395256800.jpg" alt="블랙아담" />
+        </div>
+        <div class="event_txtbox">
+          <p>[블랙 아담] 필름마크 2022.10.19 ~ 2022.11.06</p>
+        </div>
+      </article>
+    </section>
+    <!-- 광고 * 제휴 -->
+    <section id="ad">
+      <div class="ad_box">
+        <img src="img/0119_980x240.png" alt="우리카드광고" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">IR</a></li>
+          <li><a href="#">채용정보</a></li>
+          <li><a href="#">광고/제휴/출점문의</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">편성기준</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">법적고지</a></li>
+          <li><a href="#">이메일주소무단수집거부</a></li>
+          <li><a href="#">윤리경영</a></li>
+          <li><a href="#">사이버감사실</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="fav_box">
+        <div class="btn_wrap_fab">
+          <span>Share</span>
+          <div class="container_fab">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+
+        <a href="#" class="dr-url" target="_blank"
+          ><img
+            class="dr"
+            src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png"
+            alt=""
+        /></a>
+      </div>
+      <div class="footer_txt_box">
+        <p>
+          (04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)
+        </p>
+        <p>
+          대표이사 : 허민회 : 사업자등록번호 : 104-81-45690 통신판매업 신고번호
+          : 2017-서울용산-0662 사업자정보확인
+        </p>
+        <p>
+          호스팅사업자 : CJ올리브네트웍스 개인정보보호 책임자 : 심준범
+          대표이메일 : cjcgvmaster@cj.net
+        </p>
+        <p>© CJ CGV. All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- partial:index.partial.html -->
+    <canvas id="canvas"></canvas>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="js/mouse.js"></script>
+  </body>
+  <script>
+    //background
+    var colors = new Array(
+      [62, 35, 255],
+      [60, 255, 60],
+      [255, 35, 98],
+      [45, 175, 230],
+      [255, 0, 255],
+      [255, 128, 0]
+    );
+
+    var step = 0;
+    //color table indices for:
+    // current color left
+    // next color left
+    // current color right
+    // next color right
+    var colorIndices = [0, 1, 2, 3];
+
+    //transition speed
+    var gradientSpeed = 0.002;
+
+    function updateGradient() {
+      if ($ === undefined) return;
+
+      var c0_0 = colors[colorIndices[0]];
+      var c0_1 = colors[colorIndices[1]];
+      var c1_0 = colors[colorIndices[2]];
+      var c1_1 = colors[colorIndices[3]];
+
+      var istep = 1 - step;
+      var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+      var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+      var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+      var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ")";
+
+      var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+      var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+      var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+      var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+
+      $("body")
+        .css({
+          background:
+            "-webkit-gradient(linear, left top, right top, from(" +
+            color1 +
+            "), to(" +
+            color2 +
+            "))",
+        })
+        .css({
+          background:
+            "-moz-linear-gradient(left, " +
+            color1 +
+            " 0%, " +
+            color2 +
+            " 100%)",
+        });
+
+      step += gradientSpeed;
+      if (step >= 1) {
+        step %= 1;
+        colorIndices[0] = colorIndices[1];
+        colorIndices[2] = colorIndices[3];
+
+        colorIndices[1] =
+          (colorIndices[1] +
+            Math.floor(1 + Math.random() * (colors.length - 1))) %
+          colors.length;
+        colorIndices[3] =
+          (colorIndices[3] +
+            Math.floor(1 + Math.random() * (colors.length - 1))) %
+          colors.length;
+      }
+    }
+
+    setInterval(updateGradient, 10);
+  </script>
+</html>
