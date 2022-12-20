@@ -1,7 +1,3 @@
-/**
- * Velocity Effects
- */
-
 var scaleDownAmnt = 0.7;
 var boxShadowAmnt = "40px";
 
@@ -183,15 +179,7 @@ $.Velocity.RegisterEffect("scaleUp.moveDown", {
   ],
 });
 
-/**
- * Velo Slider
- * A Custom Slider using Velocity and Velocity UI effects
- */
-
 var VeloSlider = (function () {
-  /**
-   * Global Settings
-   */
   var settings = {
     veloInit: $(".velo-slides").data("velo-slider"),
     veloSlide: $(".velo-slide"),
@@ -211,28 +199,18 @@ var VeloSlider = (function () {
     animating = false;
 
   return {
-    /**
-     * Init
-     */
     init: function () {
       this.bind();
     },
 
-    /**
-     * Bind our click, scroll, key events
-     */
     bind: function () {
-      //  Add active to first slide to set it off
       settings.veloSlide.first().addClass("is-active");
 
-      //  Init with a data attribute,
-      //  Binding the animation to scroll, arrows, keys
       if (settings.veloInit == "on") {
         VeloSlider.initScrollJack();
         $(window).on("DOMMouseScroll mousewheel", VeloSlider.scrollJacking);
       }
 
-      // Arrow / Click Nav
       settings.navPrev.on("click", VeloSlider.prevSlide);
       settings.navNext.on("click", VeloSlider.nextSlide);
 
@@ -257,11 +235,6 @@ var VeloSlider = (function () {
       VeloSlider.hoverAnimation();
     },
 
-    /**
-     * Hover Animation
-     * Adds 'is-hovering' class to the current slide
-     * when hovering over the button.
-     */
     hoverAnimation: function () {
       settings.veloBtn.hover(function () {
         $(this).closest(settings.veloSlide).toggleClass("is-hovering");
@@ -302,9 +275,6 @@ var VeloSlider = (function () {
       ];
     },
 
-    /**
-     * Init Scroll Jaclk
-     */
     initScrollJack: function () {
       var visibleSlide = settings.veloSlide.filter(".is-active"),
         topSection = visibleSlide.prevAll(settings.veloSlide),
@@ -326,10 +296,6 @@ var VeloSlider = (function () {
       bottomSection.children("div").velocity(animationBottom, 0);
     },
 
-    /**
-     * Scroll Jack
-     * On Mouse Scroll
-     */
     scrollJacking: function (e) {
       if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
         delta--;
@@ -341,9 +307,6 @@ var VeloSlider = (function () {
       return false;
     },
 
-    /**
-     * Previous Slide
-     */
     prevSlide: function (e) {
       //go to previous section
       typeof e !== "undefined" && e.preventDefault();
@@ -382,9 +345,6 @@ var VeloSlider = (function () {
       VeloSlider.resetScroll();
     },
 
-    /**
-     * Next Slide
-     */
     nextSlide: function (e) {
       //go to next section
       typeof e !== "undefined" && e.preventDefault();
@@ -412,9 +372,6 @@ var VeloSlider = (function () {
       VeloSlider.resetScroll();
     },
 
-    /**
-     * Reset SCroll
-     */
     resetScroll: function () {
       delta = 0;
       VeloSlider.checkNavigation();

@@ -10,7 +10,7 @@ header .top_header {
   position: fixed;
   top: 0;
   left: 0;
-  /* border: 1px solid red; */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,45 +20,11 @@ header .top_header {
 header .top_header .img {
   width: 10%;
   margin-left: 10px;
-  /* border: 1px solid red; */
 }
 header .top_header .img img {
   width: 100%;
-  /* height: 100%; */
 }
-/* @@@@@@@@@@햄버거토글 */
-/* header .top_header .toggle {
-  width: 50px;
-  height: 35px;
-  border: 1px solid red;
-  position: relative;
-  right: 25px;
-  cursor: pointer;
-}
-header .top_header .toggle .stick {
-  width: 40px;
-  height: 5px;
-  background-color: black;
-  position: absolute;
-}
-.t_stick {
-  top: 5px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.m_stick {
-  top: 15px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.b_stick {
-  top: 25px;
-  left: 0;
-  right: 0;
-  margin: auto;
-} */
+
 #toggle {
   position: absolute;
   top: 30px;
@@ -126,8 +92,7 @@ header .top_header .toggle .stick {
   transition: all 0.3s ease, max-height 0s 0.6s ease;
   z-index: 100;
   opacity: 1;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,d6d6d6+12,bababa+25,898989+39,707070+50,707070+51,606060+60,2b2b2b+76,111111+91,131313+100 */
-  background: rgb(255, 255, 255); /* Old browsers */
+
   background: -moz-linear-gradient(
     top,
     rgba(255, 255, 255, 1) 0%,
@@ -140,7 +105,7 @@ header .top_header .toggle .stick {
     rgba(43, 43, 43, 1) 76%,
     rgba(17, 17, 17, 1) 91%,
     rgba(19, 19, 19, 1) 100%
-  ); /* FF3.6-15 */
+  );
   background: -webkit-linear-gradient(
     top,
     rgba(255, 255, 255, 1) 0%,
@@ -153,7 +118,7 @@ header .top_header .toggle .stick {
     rgba(43, 43, 43, 1) 76%,
     rgba(17, 17, 17, 1) 91%,
     rgba(19, 19, 19, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
+  );
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 0%,
@@ -166,7 +131,7 @@ header .top_header .toggle .stick {
     rgba(43, 43, 43, 1) 76%,
     rgba(17, 17, 17, 1) 91%,
     rgba(19, 19, 19, 1) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
 }
 
@@ -176,7 +141,6 @@ header .top_header .toggle .stick {
   left: 0;
   right: 0;
   text-align: center;
-  /* border: 1px solid red; */
 }
 
 #overlay nav ul,
@@ -282,19 +246,17 @@ header .top_header .toggle .stick {
   height: 50px;
   position: relative;
   top: 50px;
-  /* border: 1px solid red; */
 }
 .ac .ac_box {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: right;
-  /* border: 1px solid red; */
 }
 .ac .ac_box > a {
   width: 50px;
   height: 100%;
-  /* border: 1px solid red; */
+
   margin: 0 10px;
   text-decoration: none;
 }
@@ -304,7 +266,7 @@ header .top_header .toggle .stick {
 .ac .ac_box > a > p {
   font-size: 12px;
   color: #fff;
-  /* text-decoration: none; */
+
   text-align: center;
 }
 
@@ -314,8 +276,6 @@ header .top_header .toggle .stick {
   height: 100%;
   margin: 0px auto;
   overflow: hidden;
-
-  /* border: 1px solid red; */
 }
 
 .wrap_video:before {
@@ -325,13 +285,12 @@ header .top_header .toggle .stick {
   height: 100vh;
   background-image: url("https://clipartimage.net/thumbs/1495916688stars-png-with-transparent-background.png");
   background-size: 25%;
-  /* border: 1px solid red; */
 }
 .wrap_video {
   perspective: 1100px;
   width: 100vw;
   height: 100vh;
-  /* border: 1px solid red; */
+
   box-sizing: border-box;
 }
 .main_video {
@@ -360,14 +319,14 @@ header .top_header .toggle .stick {
 }
 .video_txt {
   width: 40%;
-  /* height: 30%; */
+
   position: absolute;
   bottom: 2%;
   left: 5%;
-  /* border: 1px solid lightblue; */
+
   border: 3px solid #333;
   background-color: rgba(0, 0, 0, 0.3);
-  /* border-top: 2px solid lightslategrey; */
+
   padding: 0 20px;
 }
 .video_txt > h2 {
@@ -380,7 +339,7 @@ header .top_header .toggle .stick {
 }
 .video_txt > p {
   font-size: 16px;
-  /* font-weight: 600; */
+
   color: #fff;
   text-shadow: 0 0 3px #333;
   line-height: 1.3;
@@ -404,7 +363,7 @@ header .top_header .toggle .stick {
   height: 30px;
   line-height: 30px;
   font-size: 20px;
-  /* border: 1px solid lightgray; */
+
   background-color: rgb(252, 14, 85);
   color: #fff;
   border-radius: 5px;
@@ -419,12 +378,12 @@ header .top_header .toggle .stick {
   height: 1000px;
   position: relative;
   top: 100px;
-  /* border: 1px solid red; */
+
   overflow: hidden;
 }
 #chart > h3 {
   width: 100%;
-  /* border: 1px solid red; */
+
   font-size: 35px;
   font-weight: bold;
   text-align: center;
@@ -433,7 +392,7 @@ header .top_header .toggle .stick {
 }
 #chart h4 {
   width: 100%;
-  /* border: 1px solid red; */
+
   font-size: 25px;
   font-weight: 600;
   text-align: center;
@@ -444,10 +403,9 @@ header .top_header .toggle .stick {
 /* @@@@@@@@@@@@@@@@@@@차트 슬라이드 */
 .c-exp-gallery__slider {
   position: relative;
-  /* border: 1px solid red; */
+
   position: relative;
   top: 100px;
-  /* overflow: hidden; */
 }
 
 .proxy {
@@ -462,7 +420,6 @@ header .top_header .toggle .stick {
   display: block;
   width: 100%;
   height: auto;
-  /* border: 1px solid red; */
 }
 .c-exp-gallery-slide__img > img:hover .chart_txt {
   top: 0;
@@ -472,15 +429,14 @@ header .top_header .toggle .stick {
   height: 100%;
   position: absolute;
   top: 0;
-  /* top: 110%; */
+
   left: 0;
-  /* border: 1px solid red; */
+
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: rgba(255, 255, 255, 0.2); */
 }
 .c-exp-gallery-slide__img .chart_txt > h3 {
   width: 100%;
@@ -495,7 +451,7 @@ header .top_header .toggle .stick {
 }
 .c-exp-gallery-slide__img .chart_txt > span {
   display: block;
-  /* border: 1px solid red; */
+
   position: relative;
   top: 70%;
   text-align: center;
@@ -508,7 +464,7 @@ header .top_header .toggle .stick {
 }
 .c-exp-gallery-slide__img .chart_txt > button {
   display: inline-block;
-  /* border: 1px solid red; */
+
   position: relative;
   top: 40%;
 }
@@ -529,7 +485,7 @@ header .top_header .toggle .stick {
   height: 30px;
   line-height: 30px;
   font-size: 20px;
-  /* border: 1px solid lightgray; */
+
   background-color: rgb(252, 14, 85);
   border-radius: 5px;
   color: #fff;
@@ -545,12 +501,11 @@ header .top_header .toggle .stick {
 }
 .c-exp-gallery__slider {
   width: 100vw;
-  /* border: 1px solid red; */
+
   border-top: 2px solid #888888;
 }
 .c-exp-gallery__inner {
   white-space: nowrap;
-  /* border: 1px solid red; */
 }
 .c-exp-gallery-slide {
   display: inline-block;
@@ -562,12 +517,8 @@ header .top_header .toggle .stick {
   height: 500px;
 
   overflow: hidden;
-  /* border: 1px solid red; */
 }
-/* .c-exp-gallery-slide__img > img {
-  width: 100%;
-  height: 100%; !important
-} */
+
 .c-exp-gallery-slide__content {
   display: none;
   position: absolute;
@@ -584,7 +535,6 @@ header .top_header .toggle .stick {
   position: relative;
   bottom: -150px;
   text-align: center;
-  /* border: 1px solid red; */
 }
 button {
   position: relative;
@@ -676,20 +626,16 @@ button:hover .button-text {
 /* MIDDLE */
 #middle {
   width: 100vw;
-  /* height: 100vh; */
+
   display: flex;
   flex-flow: column nowrap;
   border-top: 2px solid #333;
-  /* justify-content: space-around; */
-  /* align-items: center; */
-  /* border: 1px solid red; */
-  /* position: relative; */
 }
 /* circle_menu@@@ */
 #middle .circle_menu {
   width: 100%;
   height: 700px;
-  /* border: 1px solid red; */
+
   position: relative;
   overflow: hidden;
 }
@@ -716,13 +662,13 @@ button:hover .button-text {
   z-index: 9;
   top: 0;
   left: 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333333+0,000000+100&1+0,0+50 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+
   background: linear-gradient(
     to bottom,
     rgb(34, 34, 34) 0%,
     rgba(34, 34, 34, 0) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#222222", endColorstr="#222222",GradientType=0 ); /* IE6-9 */
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#222222", endColorstr="#222222",GradientType=0 );
 }
 
 .header > * {
@@ -743,7 +689,6 @@ hr.small {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  /* border: 1px solid red; */
 }
 .details .title {
   margin-bottom: 0;
@@ -755,18 +700,7 @@ hr.small {
   font-size: 20px;
   font-weight: 600;
 }
-/* .details .button {
-  background: transparent;
-  border: 1px solid white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-top: 1.2rem;
-  z-index: 100;
-  color: #333;
-  cursor: pointer;
-} */
+
 .details .button {
   color: #333;
   font-size: 20px;
@@ -851,18 +785,12 @@ hr.small {
 .circle_menu nav .next {
   margin-right: 16px;
 }
-/* .circle_menu nav .prev {
-  float: left;
-}
-.circle_menu nav .next {
-  float: right;
-} */
 
 /*@@@@@@@@@section_special  */
 #section_special {
   width: 100vw;
   height: 100vh;
-  /* border: 1px solid red; */
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -880,9 +808,6 @@ hr.small {
   width: 300px;
   height: 500px;
   position: relative;
-  /* border: 1px solid red; */
-  /* top: 150px;
-  left: 5%; */
 }
 
 #bx-pager {
@@ -893,7 +818,7 @@ hr.small {
   margin: auto;
 
   display: flex;
-  /* border: 1px solid red; */
+
   align-items: center;
   justify-content: center;
 }
@@ -917,7 +842,6 @@ hr.small {
 #section_special #slider_body {
   width: 50%;
   height: 500px;
-  /* border: 1px solid red; */
 }
 
 /* event */
@@ -942,8 +866,6 @@ hr.small {
   text-shadow: 5px 5px 0px #07bccc, 10px 10px 0px #e601c0, 15px 15px 0px #e9019a,
     20px 20px 0px #f40468, 30px 30px 10px #482896;
   cursor: pointer;
-  /* border: 1px solid red; */
-  /* margin-top: 300px; */
 }
 
 #event > h3:hover {
@@ -952,7 +874,7 @@ hr.small {
 }
 #event article {
   width: 33%;
-  /* overflow: hidden; */
+
   box-sizing: border-box;
 }
 #event article:hover img {
@@ -1028,7 +950,7 @@ footer {
 }
 footer .fav_box {
   width: 100%;
-  /* border: 1px solid red; */
+
   box-sizing: border-box;
   margin-top: 10px;
 }
@@ -1042,8 +964,6 @@ footer .fav_box {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* height: 100vh; */
-  /* background-color: #fefefe; */
 }
 
 .btn_wrap_fab > i {

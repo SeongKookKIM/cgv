@@ -8,9 +8,6 @@
   letter-spacing: 0.2em;
 }
 
-/** 
- * Default to Border Box
- */
 *,
 *:before,
 *:after {
@@ -85,9 +82,6 @@ h6 {
   font-weight: 700;
 }
 
-/**
- * Links
- */
 a {
   text-decoration: none;
   background-color: transparent;
@@ -561,7 +555,6 @@ a:hover .btn-draw.btn--white {
 }
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "ssicons" !important;
   /* speak: none; */
   font-style: normal;
@@ -569,7 +562,7 @@ a:hover .btn-draw.btn--white {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

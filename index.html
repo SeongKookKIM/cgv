@@ -38,12 +38,11 @@
 
       body::-webkit-scrollbar-thumb {
           height: 20%; 
-          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff1a00+0,ff1a00+100;Red+Flat+%231 */
           background: rgb(255,26,0); /* Old browsers */
-          background: -moz-linear-gradient(top,  rgba(255,26,0,1) 0%, rgba(255,26,0,1) 100%); /* FF3.6-15 */
-          background: -webkit-linear-gradient(top,  rgba(255,26,0,1) 0%,rgba(255,26,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(to bottom,  rgba(255,26,0,1) 0%,rgba(255,26,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#ff1a00',GradientType=0 ); /* IE6-9 */
+          background: -moz-linear-gradient(top,  rgba(255,26,0,1) 0%, rgba(255,26,0,1) 100%); 
+          background: -webkit-linear-gradient(top,  rgba(255,26,0,1) 0%,rgba(255,26,0,1) 100%); 
+          background: linear-gradient(to bottom,  rgba(255,26,0,1) 0%,rgba(255,26,0,1) 100%); 
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#ff1a00',GradientType=0 ); 
 
           border-radius: 10px;
       }
@@ -512,14 +511,10 @@
     );
 
     var step = 0;
-    //color table indices for:
-    // current color left
-    // next color left
-    // current color right
-    // next color right
+    
     var colorIndices = [0, 1, 2, 3];
 
-    //transition speed
+    
     var gradientSpeed = 0.002;
 
     function updateGradient() {

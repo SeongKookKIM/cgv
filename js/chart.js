@@ -31,16 +31,16 @@ class DraggableSlider {
   createDraggable() {
     var slider = this.slider,
       tracker = ThrowPropsPlugin.track(slider, "x"),
-      pressedTop; //when the users presses down, if the mouse is in the top half of the image, pressedTop will be true. We use this to make the skewing more natural, like the mouse is "pulling" that part of the image
+      pressedTop;
     this.draggable = Draggable.create(this.proxy, {
       type: "x",
       edgeResistance: 0.75,
       onPress: function (e) {
         var bounds = this.target.getBoundingClientRect();
         pressedTop = e.clientY < bounds.y + bounds.height / 2;
-        //keep track of how far apart the proxy is from the slider because when the user presses down, we want to IMMEDIATELY stop any motion, thus this offset value becomes baked in until release.
+
         this.offset = this.x - slider._gsTransform.x;
-        TweenLite.killTweensOf(slider); //in case it's moving
+        TweenLite.killTweensOf(slider);
         TweenLite.to(slider, 0.2, {
           skewX: 0,
         });
@@ -52,7 +52,6 @@ class DraggableSlider {
         });
       },
       onRelease: function () {
-        //if the user just presses down and releases without really moving much at all, there's no need to do a throwProps tween.
         if (this.tween && Math.abs(tracker.getVelocity("x")) > 20) {
           TweenLite.to(slider, this.tween.duration(), {
             throwProps: {
